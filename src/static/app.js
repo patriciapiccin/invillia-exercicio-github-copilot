@@ -27,9 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
           ${
             details.participants.length > 0
-              ? `<p><strong>Participants:</strong></p><ul>${details.participants
-                  .map((participant) => `<li>${participant}</li>`)
-                  .join("")}</ul>`
+              ? `
+                <div class="participants">
+                  <h5>Participants:</h5>
+                  <ul>${details.participants
+                    .map((participant) => `<li>${participant}</li>`)
+                    .join("")}</ul>
+                </div>`
               : "<p><strong>Participants:</strong> No participants yet</p>"
           }
         `;
